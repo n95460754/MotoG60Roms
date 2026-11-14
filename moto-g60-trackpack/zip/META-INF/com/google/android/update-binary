@@ -1,0 +1,141 @@
+#!/sbin/sh
+# TrackPack installer for Moto G60 (hanoip) - TWRP flashable
+# Installs GPS / Wi-Fi / cellular tracking apps.
+#
+# Modes (picked from the zip file name):
+#   default          -> apps go to /data/app (safe: no system/dm-verity changes)
+#   name has "system" -> apps go to /system/app + location permissions pre-granted
+#                       (needs disabled dm-verity / Magisk, otherwise bootloop!)
+
+OUTFD="$2"
+ZIPFILE="$3"
+TMPD=/tmp/trackpack
+
+ui_print() { echo "ui_print $1" >&"$OUTFD"; echo "ui_print" >&"$OUTFD"; }
+abort() { ui_print "! $1"; cleanup; exit 1; }
+cleanup() { [ -n "$SYSMNT" ] && umount "$SYSMNT" 2>/dev/null; rm -rf "$TMPD"; }
+
+ui_print "==================================="
+ui_print "  TrackPack for Moto G60 (hanoip)"
+ui_print "  GPS + Wi-Fi + Cellular apps"
+ui_print "==================================="
+
+rm -rf "$TMPD"; mkdir -p "$TMPD"
+unzip -o "$ZIPFILE" -d "$TMPD" >/dev/null 2>&1 || abort "Cannot extract zip"
+[ -f "$TMPD/apps.list" ] || abort "apps.list missing"
+
+# --- device check (warn only) ---
+DEV="$(getprop ro.product.device)"
+case "$DEV" in
+  *hanoip*|*hanoi*|*g60*) ui_print "- Device: $DEV" ;;
+  *) ui_print "! Device '$DEV' is not hanoip (Moto G60). Continuing anyway." ;;
+esac
+
+# --- mode from zip name ---
+MODE=data
+case "$(basename "$ZIPFILE" | tr 'A-Z' 'a-z')" in *system*) MODE=system ;; esac
+ui_print "- Install mode: $MODE"
+
+# --- find Android SDK level (read-only system mount) ---
+SLOT="$(getprop ro.boot.slot_suffix)"
+SYSMNT=/tmp/tp_system
+mkdir -p "$SYSMNT"
+SYSBLK=""
+for b in /dev/block/mapper/system$SLOT /dev/block/mapper/system /dev/block/bootdevice/by-name/system$SLOT; do
+  [ -e "$b" ] && { SYSBLK="$b"; break; }
+done
+[ -n "$SYSBLK" ] || abort "System partition not found"
+
+if [ "$MODE" = system ]; then
+  blockdev --setrw "$SYSBLK" 2>/dev/null
+  mount -t ext4 -o rw "$SYSBLK" "$SYSMNT" 2>/dev/null || mount -o rw "$SYSBLK" "$SYSMNT" 2>/dev/null
+  touch "$SYSMNT/.tp_rw" 2>/dev/null && rm -f "$SYSMNT/.tp_rw" || {
+    ui_print "! /system is read-only (shared blocks / EROFS)."
+    ui_print "! Falling back to /data install."
+    umount "$SYSMNT" 2>/dev/null
+    MODE=data
+  }
+fi
+if [ "$MODE" = data ]; then
+  mount -o ro "$SYSBLK" "$SYSMNT" 2>/dev/null
+fi
+
+SYSROOT="$SYSMNT"
+[ -f "$SYSMNT/system/build.prop" ] && SYSROOT="$SYSMNT/system"
+SDK="$(grep '^ro.build.version.sdk=' "$SYSROOT/build.prop" 2>/dev/null | cut -d= -f2)"
+[ -n "$SDK" ] || SDK="$(getprop ro.build.version.sdk)"
+ui_print "- Android SDK: $SDK"
+
+# --- data mount (needed for data mode and /sdcard copy) ---
+mount /data 2>/dev/null
+DATA_OK=0
+[ -d /data/app ] && DATA_OK=1
+[ "$MODE" = data ] && [ "$DATA_OK" = 0 ] && abort "/data not mounted. Mount Data in TWRP first."
+
+# --- native lib extraction (arm64 only on G60) ---
+extract_libs() { # $1=apk $2=target-dir
+  if unzip -l "$1" 2>/dev/null | grep -q 'lib/arm64-v8a/.*\.so'; then
+    mkdir -p "$2/lib/arm64"
+    unzip -o -j "$1" 'lib/arm64-v8a/*.so' -d "$2/lib/arm64" >/dev/null 2>&1
+    chmod 755 "$2/lib" "$2/lib/arm64"; chmod 644 "$2/lib/arm64/"*.so
+  fi
+}
+
+INSTALLED=""
+while IFS='|' read -r APK PKG MINSDK NAME; do
+  [ -z "$APK" ] && continue
+  case "$APK" in \#*) continue ;; esac
+  SRC="$TMPD/apks/$APK"
+  [ -f "$SRC" ] || { ui_print "! $NAME: $APK missing, skipped"; continue; }
+  if [ -n "$MINSDK" ] && [ -n "$SDK" ] && [ "$SDK" -lt "$MINSDK" ]; then
+    ui_print "! $NAME needs SDK $MINSDK (you have $SDK) - skipped"
+    continue
+  fi
+
+  if [ "$MODE" = system ]; then
+    DST="$SYSROOT/app/$NAME"
+    rm -rf "$DST"; mkdir -p "$DST"
+    cp -f "$SRC" "$DST/$NAME.apk"
+    extract_libs "$SRC" "$DST"
+    chmod 755 "$DST"; chmod 644 "$DST/$NAME.apk"
+    chown -R 0:0 "$DST"
+    chcon -R u:object_r:system_file:s0 "$DST" 2>/dev/null
+  else
+    # PackageManager scans /data/app on boot and registers new packages
+    rm -rf /data/app/"$PKG"-* /data/app/*/"$PKG"-* 2>/dev/null
+    DST="/data/app/$PKG-trackpack"
+    mkdir -p "$DST"
+    cp -f "$SRC" "$DST/base.apk"
+    extract_libs "$SRC" "$DST"
+    chmod 755 "$DST"; chmod 644 "$DST/base.apk"
+    chown -R 1000:1000 "$DST"
+    chcon -R u:object_r:apk_data_file:s0 "$DST" 2>/dev/null
+  fi
+  ui_print "+ $NAME ($PKG)"
+  INSTALLED="$INSTALLED $PKG"
+done < "$TMPD/apps.list"
+
+# --- pre-grant GPS / Wi-Fi / notification permissions (system mode only) ---
+if [ "$MODE" = system ] && [ -f "$TMPD/system/etc/default-permissions/default-permissions-trackpack.xml" ]; then
+  mkdir -p "$SYSROOT/etc/default-permissions"
+  cp -f "$TMPD/system/etc/default-permissions/default-permissions-trackpack.xml" "$SYSROOT/etc/default-permissions/"
+  chmod 644 "$SYSROOT/etc/default-permissions/default-permissions-trackpack.xml"
+  chcon u:object_r:system_file:s0 "$SYSROOT/etc/default-permissions/default-permissions-trackpack.xml" 2>/dev/null
+  ui_print "+ Location/Wi-Fi permissions pre-granted"
+fi
+
+# --- backup copies of the APKs on internal storage ---
+if [ "$DATA_OK" = 1 ] && [ -d /data/media/0 ]; then
+  mkdir -p /data/media/0/TrackPack
+  cp -f "$TMPD/apks/"*.apk /data/media/0/TrackPack/ 2>/dev/null
+  chown -R 1023:1023 /data/media/0/TrackPack 2>/dev/null
+  ui_print "- APK copies: Internal storage/TrackPack"
+fi
+
+[ -z "$INSTALLED" ] && abort "Nothing was installed"
+
+ui_print " "
+ui_print "Done! Wipe Dalvik/ART cache, then reboot."
+ui_print "First boot may take 1-3 min (apps get registered)."
+cleanup
+exit 0

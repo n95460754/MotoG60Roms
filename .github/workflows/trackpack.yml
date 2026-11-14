@@ -1,0 +1,55 @@
+name: Build TrackPack (Moto G60 TWRP zip)
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "moto-g60-trackpack/**"
+      - ".github/workflows/trackpack.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Clone app sources
+        run: |
+          mkdir -p src apks
+          git clone --depth 1 https://github.com/nickfox/GpsTracker.git src/GpsTracker
+          git clone --depth 1 https://github.com/OffGridPete/Fieldwatch.git src/Fieldwatch
+          git clone --depth 1 https://github.com/stepanic/mobile-phone-proxy.git src/mobile-phone-proxy
+
+      - name: Build GpsTracker
+        working-directory: src/GpsTracker/phoneClients/android
+        run: chmod +x gradlew && ./gradlew --no-daemon assembleDebug
+
+      - name: Build mobile-phone-proxy
+        working-directory: src/mobile-phone-proxy/android
+        run: chmod +x gradlew && ./gradlew --no-daemon assembleDebug
+
+      - name: Collect APKs
+        run: |
+          cp "$(find src/GpsTracker/phoneClients/android/app/build/outputs/apk -name '*.apk' | head -1)" apks/GpsTracker.apk
+          cp "$(find src/mobile-phone-proxy/android/app/build/outputs/apk -name '*.apk' | head -1)" apks/MobilePhoneProxy.apk
+          # Fieldwatch ships an official signed release APK
+          cp src/Fieldwatch/dist/Fieldwatch.apk apks/Fieldwatch.apk
+          ls -la apks
+
+      - name: Pack TWRP zips
+        run: |
+          chmod +x moto-g60-trackpack/build.sh
+          moto-g60-trackpack/build.sh apks out/TrackPack-MotoG60.zip
+          cp out/TrackPack-MotoG60.zip out/TrackPack-MotoG60-system.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: TrackPack-MotoG60
+          path: out/*.zip
