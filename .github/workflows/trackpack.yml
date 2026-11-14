@@ -18,7 +18,13 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - uses: android-actions/setup-android@v3
+      # The ubuntu runner already ships the Android SDK ($ANDROID_HOME).
+      # android-actions/setup-android@v3 failed here: it asks sdkmanager for
+      # the removed legacy 'tools' package.
+      - name: Check Android SDK
+        run: |
+          echo "ANDROID_HOME=$ANDROID_HOME"
+          ls "$ANDROID_HOME/build-tools"
 
       - name: Clone app sources
         run: |
