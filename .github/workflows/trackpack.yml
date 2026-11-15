@@ -10,6 +10,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # create the GitHub Release
     steps:
       - uses: actions/checkout@v4
 
@@ -59,3 +61,22 @@ jobs:
         with:
           name: TrackPack-MotoG60
           path: out/*.zip
+
+      # Artifacts expire after at most 90 days; release assets never expire.
+      - name: Publish permanent GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="trackpack-${{ github.run_number }}"
+          (cd out && sha256sum *.zip > SHA256SUMS)
+          cat > notes.md <<EOF
+          TWRP flashable zips for the Moto G60 (hanoip): GpsTracker, Fieldwatch, mobile-phone-proxy.
+
+          - TrackPack-MotoG60.zip: installs to /data/app (safe default)
+          - TrackPack-MotoG60-system.zip: installs as system apps with location permissions pre-granted (needs dm-verity disabled)
+
+          Built from commit ${GITHUB_SHA} on branch ${GITHUB_REF_NAME}. Make a TWRP backup before flashing.
+          EOF
+          gh release create "$tag" out/*.zip out/SHA256SUMS \
+            --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
+            --title "TrackPack for Moto G60 #${{ github.run_number }}" --notes-file notes.md
