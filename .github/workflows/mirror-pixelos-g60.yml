@@ -13,7 +13,6 @@ env:
   TAG: "g60-pixelos16.2-20261102"
   ZIP: "PixelOS_hanoip-16.2-20261102-0504-UNOFFICIAL-signed.zip"
   ZIP_SHA256: "7e14800331874a9433a52970a158395e741c042c420f5aab625996d7d2a1c086"
-  SF_URL: "https://sourceforge.net/projects/pixelos-hanoip/files/16/PixelOS_hanoip-16.2-20261102-0504-UNOFFICIAL-signed.zip/download"
   IMG_BASE: "https://github.com/luizpaulo2005/pixelos-hanoip/releases/download/16.2-20261102"
 
 jobs:
@@ -23,8 +22,18 @@ jobs:
       - name: Download ROM zip and fastboot images
         run: |
           mkdir out && cd out
-          curl -fL --retry 5 --retry-delay 10 -o "$ZIP" "$SF_URL"
-          echo "$ZIP_SHA256  $ZIP" | sha256sum -c -
+          # Try several SourceForge mirrors; abort a mirror if it drops below 1 MB/s for 60 s
+          ok=0
+          for m in phoenixnap netcologne freefr deac-ams kumisystems altushost-swe netix master; do
+            echo "== mirror: $m"
+            rm -f "$ZIP"
+            if timeout 15m curl -fL --connect-timeout 20 --speed-limit 1000000 --speed-time 60 \
+                 -o "$ZIP" "https://$m.dl.sourceforge.net/project/pixelos-hanoip/16/$ZIP?viasf=1" \
+               && echo "$ZIP_SHA256  $ZIP" | sha256sum -c -; then
+              ok=1; break
+            fi
+          done
+          [ "$ok" = 1 ] || { echo "All mirrors failed"; exit 1; }
           for f in boot.img vendor_boot.img dtbo.img vbmeta.img sha256sums.txt; do
             curl -fL --retry 5 -o "$f" "$IMG_BASE/$f"
           done
