@@ -12,34 +12,66 @@
       "status": "unofficial",
       "posted": "2026-11",
       "thread": 4807454,
-      "slug": "rom-16-unofficial-pixelos-16-for-motorola-moto-g60-hanoip"
+      "slug": "rom-16-unofficial-pixelos-16-for-motorola-moto-g60-hanoip",
+      "release": {
+        "version": "PixelOS 16 (patch 2026-06)",
+        "date": "2026-11-03",
+        "download": [
+          "https://sourceforge.net/projects/pixelos-hanoip/files/",
+          "https://github.com/luizpaulo2005/pixelos-hanoip/releases"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "Project Infinity X 3.11",
       "android": "16",
-      "type": "native",
+      "type": "gsi",
       "status": "shared",
       "posted": "2026",
       "thread": 4791228,
-      "slug": "project-infinity-x-3-11-for-moto-g40-g60"
+      "slug": "project-infinity-x-3-11-for-moto-g40-g60",
+      "release": {
+        "version": "v3.11 (A16 QPR2)",
+        "date": "2026-06-07",
+        "download": [
+          "https://github.com/Doze-off/ProjectInfinity-X_gsi"
+        ],
+        "gapps": "both"
+      }
     },
     {
       "name": "Infinity X 3.9 (QPR2)",
       "android": "16",
-      "type": "native",
+      "type": "gsi",
       "status": "shared",
       "posted": "2026",
       "thread": 4786735,
-      "slug": "infinity-x-3-9-qpr2-for-moto-g40-g60"
+      "slug": "infinity-x-3-9-qpr2-for-moto-g40-g60",
+      "release": {
+        "version": "3.9 QPR2",
+        "date": "2026-04-19",
+        "download": [
+          "https://github.com/Doze-off/ProjectInfinity-X_gsi/releases/tag/2026-04-19"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "Lunaris AOSP (March 2026)",
       "android": "16",
-      "type": "native",
+      "type": "gsi",
       "status": "shared",
       "posted": "2026-03",
       "thread": 4783256,
-      "slug": "lunaris-aosp-android-16-march-2026-for-moto-g40-g60"
+      "slug": "lunaris-aosp-android-16-march-2026-for-moto-g40-g60",
+      "release": {
+        "version": "March 2026",
+        "date": "2026-03-11",
+        "download": [
+          "https://github.com/Doze-off/Lunaris-AOSP_gsi/releases/tag/2026-03-11"
+        ]
+      }
     },
     {
       "name": "Evolution X (GSI)",
@@ -48,7 +80,14 @@
       "status": "shared",
       "posted": "2025",
       "thread": 4768707,
-      "slug": "evolution-x-android-16-gsi-for-moto-g40-g60"
+      "slug": "evolution-x-android-16-gsi-for-moto-g40-g60",
+      "release": {
+        "version": "Android 16 GSI",
+        "date": "2025-11-20",
+        "download": [
+          "https://github.com/Doze-off/EvoX_treble"
+        ]
+      }
     },
     {
       "name": "RisingOS (GSI)",
@@ -57,7 +96,14 @@
       "status": "shared",
       "posted": "2025",
       "thread": 4764607,
-      "slug": "rising-os-android-16-gsi-for-moto-g40-g60"
+      "slug": "rising-os-android-16-gsi-for-moto-g40-g60",
+      "release": {
+        "version": "Rising OS Revived",
+        "date": "2025-10-21",
+        "download": [
+          "https://github.com/Doze-off/rising_treble"
+        ]
+      }
     },
     {
       "name": "DerpFest 16.0 (GSI)",
@@ -66,7 +112,14 @@
       "status": "shared",
       "posted": "2025",
       "thread": 4773320,
-      "slug": "derpfest-16-0-gsi-for-moto-g40-g60"
+      "slug": "derpfest-16-0-gsi-for-moto-g40-g60",
+      "release": {
+        "version": "16.0",
+        "date": "2025-12-22",
+        "download": [
+          "https://github.com/Doze-off/Derpfest_treble/releases/tag/2025-12-22"
+        ]
+      }
     },
     {
       "name": "2by2 Lineage",
@@ -75,16 +128,30 @@
       "status": "official",
       "posted": "2024",
       "thread": 4704253,
-      "slug": "rom-15-official-2by2-lineage-stable-g40f-g60"
+      "slug": "rom-15-official-2by2-lineage-stable-g40f-g60",
+      "release": {
+        "version": "LineageOS 22.0 (patch 2024-10)",
+        "date": "2024-11-22",
+        "download": [
+          "https://sourceforge.net/projects/project2by2-test/files/hanoip/15/"
+        ]
+      }
     },
     {
       "name": "Pixel Build (27.9.2025)",
-      "android": "?",
+      "android": "14",
       "type": "native",
       "status": "shared",
       "posted": "2025-09",
       "thread": 4761982,
-      "slug": "pixel-build-for-the-motorola-g40f-g60-hanoip-27-9-2025"
+      "slug": "pixel-build-for-the-motorola-g40f-g60-hanoip-27-9-2025",
+      "release": {
+        "version": "infinity-20250927-1740",
+        "date": "2025-09-27",
+        "download": [
+          "https://git.pixelbuilds.org/releases/hanoip/releases/tag/20250927-1740"
+        ]
+      }
     },
     {
       "name": "PixelExperience",
@@ -93,7 +160,15 @@
       "status": "unofficial",
       "posted": "2022-05",
       "thread": 4449285,
-      "slug": "rom-14-0-hanoip-pixelexperience-aosp-g60-g40f"
+      "slug": "rom-14-0-hanoip-pixelexperience-aosp-g60-g40f",
+      "release": {
+        "version": "PixelExperience Plus",
+        "date": "2024-03-21",
+        "download": [
+          "https://motorola-sm6150.github.io/"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "crDroid (stable)",
@@ -102,7 +177,13 @@
       "status": "unofficial",
       "posted": "2024-05",
       "thread": 4670954,
-      "slug": "rom-14-unofficial-hanoip-stable-crdroid-android-for-moto-g60-g40"
+      "slug": "rom-14-unofficial-hanoip-stable-crdroid-android-for-moto-g60-g40",
+      "release": {
+        "version": "crDroid 10.6",
+        "download": [
+          "https://crdroid.net/hanoip/10"
+        ]
+      }
     },
     {
       "name": "crDroid 10.6",
@@ -111,7 +192,14 @@
       "status": "shared",
       "posted": "2024",
       "thread": 4690543,
-      "slug": "crdroid-10-6-hanoip-2024"
+      "slug": "crdroid-10-6-hanoip-2024",
+      "release": {
+        "version": "crDroid 10.6",
+        "date": "2024-07-28",
+        "download": [
+          "https://crdroid.net/hanoip/10"
+        ]
+      }
     },
     {
       "name": "crDroid 10.2 (17-2-24)",
@@ -120,7 +208,14 @@
       "status": "shared",
       "posted": "2024-02",
       "thread": 4658344,
-      "slug": "crdroid-10-2-17-2-24-hanoip"
+      "slug": "crdroid-10-2-17-2-24-hanoip",
+      "release": {
+        "version": "crDroid 10.2",
+        "date": "2024-02-17",
+        "download": [
+          "https://sourceforge.net/projects/kevin-roms/files/Hanoip/"
+        ]
+      }
     },
     {
       "name": "crDroid 10",
@@ -129,7 +224,15 @@
       "status": "shared",
       "posted": "2024",
       "thread": 4650983,
-      "slug": "shared-crdroid-10-android-14-hanoip"
+      "slug": "shared-crdroid-10-android-14-hanoip",
+      "release": {
+        "version": "crDroid 10",
+        "date": "2024-01-08",
+        "download": [
+          "https://pixeldrain.com/u/BnV13w7x"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "LineageOS 21",
@@ -138,7 +241,14 @@
       "status": "unofficial",
       "posted": "2024",
       "thread": 4668721,
-      "slug": "rom-14-0-aosp-g60-40-lineageos-21"
+      "slug": "rom-14-0-aosp-g60-40-lineageos-21",
+      "release": {
+        "version": "LineageOS 21.0",
+        "date": "2024-05-12",
+        "download": [
+          "https://sourceforge.net/projects/kevin-roms/files/SM6150/"
+        ]
+      }
     },
     {
       "name": "LineageOS (Android 14)",
@@ -147,7 +257,15 @@
       "status": "shared",
       "posted": "2024",
       "thread": 4653649,
-      "slug": "lineage-os-android-14-hanoip"
+      "slug": "lineage-os-android-14-hanoip",
+      "release": {
+        "version": "LineageOS 21",
+        "date": "2024-01-29",
+        "download": [
+          "https://sourceforge.net/projects/sozosha-2-0/files/LineageOS/"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "Lineage OS 2.1.0 (16-2-2024)",
@@ -156,7 +274,14 @@
       "status": "shared",
       "posted": "2024-02",
       "thread": 4658346,
-      "slug": "lineage-os-2-1-0-16-2-2024-hanoip"
+      "slug": "lineage-os-2-1-0-16-2-2024-hanoip",
+      "release": {
+        "version": "LineageOS 21.0",
+        "date": "2024-02-16",
+        "download": [
+          "https://sourceforge.net/projects/kevin-roms/files/Hanoip/"
+        ]
+      }
     },
     {
       "name": "Project Sakura",
@@ -165,7 +290,15 @@
       "status": "official",
       "posted": "2024-09",
       "thread": 4693290,
-      "slug": "shared-rom-official-project-sakura-g60-g40f-14-hanoip-gapps"
+      "slug": "shared-rom-official-project-sakura-g60-g40f-14-hanoip-gapps",
+      "release": {
+        "version": "Project Sakura 9.4",
+        "date": "2024-08-31",
+        "download": [
+          "https://sourceforge.net/projects/projectsakura/files/hanoip/"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "PixelBuilds",
@@ -174,7 +307,14 @@
       "status": "unofficial",
       "posted": "2025-12",
       "thread": 4773713,
-      "slug": "rom-unofficial-pixelbuilds-android14-hanoip"
+      "slug": "rom-unofficial-pixelbuilds-android14-hanoip",
+      "release": {
+        "version": "infinity-oss-20251230",
+        "date": "2025-12-30",
+        "download": [
+          "https://github.com/alessblaze/android_device_motorola_hanoip/releases/tag/DEC30"
+        ]
+      }
     },
     {
       "name": "PixelBuilds (older thread)",
@@ -183,7 +323,13 @@
       "status": "unofficial",
       "posted": "2024",
       "thread": 4683699,
-      "slug": "rom-unofficial-pixelbuilds-android14-hanoip"
+      "slug": "rom-unofficial-pixelbuilds-android14-hanoip",
+      "release": {
+        "date": "2024-07-28",
+        "download": [
+          "https://www.pling.com/p/2167654/"
+        ]
+      }
     },
     {
       "name": "PixelOS",
@@ -192,16 +338,31 @@
       "status": "unofficial",
       "posted": "2024",
       "thread": 4657000,
-      "slug": "rom-14-unofficial-pixelos-aosp-stable-g40f-g60"
+      "slug": "rom-14-unofficial-pixelos-aosp-stable-g40f-g60",
+      "release": {
+        "version": "PixelOS 14",
+        "date": "2024-02-17",
+        "download": [
+          "https://www.pling.com/p/2130171/"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "PixelOS (shared)",
-      "android": "14",
+      "android": "13",
       "type": "native",
       "status": "shared",
       "posted": "2024",
       "thread": 4649364,
-      "slug": "shared-pixelos-unofficial-motog60-g40-fusion"
+      "slug": "shared-pixelos-unofficial-motog60-g40-fusion",
+      "release": {
+        "version": "PixelOS 13.0",
+        "date": "2024-01-05",
+        "download": [
+          "https://sourceforge.net/projects/hanoip-roms/files/PixelOS/Android13/"
+        ]
+      }
     },
     {
       "name": "PixelOS (Feb 2024)",
@@ -210,7 +371,12 @@
       "status": "closed",
       "posted": "2024-02",
       "thread": 4655940,
-      "slug": "closed-pixel-os-feb-2024-hanoip"
+      "slug": "closed-pixel-os-feb-2024-hanoip",
+      "release": {
+        "version": "PixelOS 14 (Feb 2024 patch)",
+        "date": "2024-02-09",
+        "note": "download link removed by moderators"
+      }
     },
     {
       "name": "PixelStar 2.0",
@@ -219,7 +385,14 @@
       "status": "official",
       "posted": "2024-05",
       "thread": 4671018,
-      "slug": "official-rom-14-may-patch-pixelstar-2-0-aosp-stable-g40f-g60"
+      "slug": "official-rom-14-may-patch-pixelstar-2-0-aosp-stable-g40f-g60",
+      "release": {
+        "version": "PixelStar 2.0 (May 2024 patch)",
+        "date": "2024-05-09",
+        "download": [
+          "https://www.pling.com/p/2066696/"
+        ]
+      }
     },
     {
       "name": "PixelStar 2.0",
@@ -228,7 +401,14 @@
       "status": "unofficial",
       "posted": "2024",
       "thread": 4670782,
-      "slug": "rom-14-unofficial-pixelstar-2-0-aosp-stable-g40f-g60"
+      "slug": "rom-14-unofficial-pixelstar-2-0-aosp-stable-g40f-g60",
+      "release": {
+        "version": "PixelStar 2.0",
+        "date": "2024-05-07",
+        "download": [
+          "https://www.pling.com/p/2153003/"
+        ]
+      }
     },
     {
       "name": "Evolution X 9.4 (9 Sep 2024)",
@@ -237,7 +417,11 @@
       "status": "shared",
       "posted": "2024-09",
       "thread": 4690538,
-      "slug": "9-sep-2024-evolution-x-9-4-hanoip-ai"
+      "slug": "9-sep-2024-evolution-x-9-4-hanoip-ai",
+      "release": {
+        "version": "Evolution X 9.4",
+        "date": "2024-09-10"
+      }
     },
     {
       "name": "Evolution X (16 Mar 2024)",
@@ -246,7 +430,12 @@
       "status": "shared",
       "posted": "2024-03",
       "thread": 4663512,
-      "slug": "evolution-x-hanoip-16-mar-2024"
+      "slug": "evolution-x-hanoip-16-mar-2024",
+      "release": {
+        "version": "Evolution X (Balut)",
+        "date": "2024-03-16",
+        "gapps": "included"
+      }
     },
     {
       "name": "Evolution X (stable)",
@@ -255,7 +444,15 @@
       "status": "shared",
       "posted": "2024",
       "thread": 4653577,
-      "slug": "evolution-x-stable-hanoip"
+      "slug": "evolution-x-stable-hanoip",
+      "release": {
+        "version": "Evolution X Final (Tikoy)",
+        "date": "2024-01-27",
+        "download": [
+          "https://pixeldrain.com/api/file/6n2ogsjH",
+          "https://sourceforge.net/projects/sozosha-2-0/files/Evolution/"
+        ]
+      }
     },
     {
       "name": "Evolution X v8.0.2",
@@ -264,7 +461,14 @@
       "status": "unofficial",
       "posted": "2024-01",
       "thread": 4649538,
-      "slug": "shared-rom-evolution-x-unofficial-v8-0-2motog60-g40fusion"
+      "slug": "shared-rom-evolution-x-unofficial-v8-0-2motog60-g40fusion",
+      "release": {
+        "version": "Evolution X v8.0.2 (Tikoy)",
+        "date": "2024-01-05",
+        "download": [
+          "https://pixeldrain.com/u/bKQ2jWZu"
+        ]
+      }
     },
     {
       "name": "AwakenOS",
@@ -273,7 +477,14 @@
       "status": "unofficial",
       "posted": "2024",
       "thread": 4668183,
-      "slug": "rom-14-unofficial-awakenos-aosp-stable-g40f-g60"
+      "slug": "rom-14-unofficial-awakenos-aosp-stable-g40f-g60",
+      "release": {
+        "version": "awakenOS v4.5",
+        "date": "2024-05-05",
+        "download": [
+          "https://www.pling.com/p/2148669/"
+        ]
+      }
     },
     {
       "name": "RisingOS 2.0",
@@ -282,7 +493,14 @@
       "status": "unofficial",
       "posted": "2024",
       "thread": 4667946,
-      "slug": "rom-14-0-risingos-2-0-a14-o-unofficial-aosp-g60-g40f"
+      "slug": "rom-14-0-risingos-2-0-a14-o-unofficial-aosp-g60-g40f",
+      "release": {
+        "version": "RisingOS 2.0 (Feb 2024 patch)",
+        "date": "2024-04-20",
+        "download": [
+          "https://www.pling.com/p/2135439/"
+        ]
+      }
     },
     {
       "name": "DerpFest 14 (UDC)",
@@ -291,7 +509,14 @@
       "status": "shared",
       "posted": "2024",
       "thread": 4670171,
-      "slug": "derpfest-14-g60-40-fusion-aosp-udc"
+      "slug": "derpfest-14-g60-40-fusion-aosp-udc",
+      "release": {
+        "version": "DerpFest 14 (Apr 2024 patch)",
+        "date": "2024-05-04",
+        "download": [
+          "https://sozosha-dev.github.io/"
+        ]
+      }
     },
     {
       "name": "DerpFest",
@@ -300,7 +525,14 @@
       "status": "unofficial",
       "posted": "2024",
       "thread": 4667944,
-      "slug": "rom-14-0-derpfest-a14-o-unofficial-aosp-g60-g40f"
+      "slug": "rom-14-0-derpfest-a14-o-unofficial-aosp-g60-g40f",
+      "release": {
+        "version": "DerpFest 14 (Feb 2024 patch)",
+        "date": "2024-04-20",
+        "download": [
+          "https://www.pling.com/p/2130278/"
+        ]
+      }
     },
     {
       "name": "DerpFest stable (16-2-24)",
@@ -309,7 +541,14 @@
       "status": "shared",
       "posted": "2024-02",
       "thread": 4658347,
-      "slug": "derpfest-stable-16-2-24-hanoip"
+      "slug": "derpfest-stable-16-2-24-hanoip",
+      "release": {
+        "version": "DerpFest 14 stable",
+        "date": "2024-02-16",
+        "download": [
+          "https://www.pling.com/p/2130278/"
+        ]
+      }
     },
     {
       "name": "DerpFest beta",
@@ -318,7 +557,14 @@
       "status": "shared",
       "posted": "2024",
       "thread": 4652005,
-      "slug": "derpfest-beta-android-14-hanoip"
+      "slug": "derpfest-beta-android-14-hanoip",
+      "release": {
+        "version": "DerpFest 14 beta",
+        "date": "2024-01-16",
+        "download": [
+          "https://sourceforge.net/projects/sozosha-2-0/files/DerpFest/"
+        ]
+      }
     },
     {
       "name": "BlissROM v17.5",
@@ -327,7 +573,11 @@
       "status": "unofficial",
       "posted": "2024",
       "thread": 4672061,
-      "slug": "rom-unofficial-blissrom-v17-5-for-hanoip"
+      "slug": "rom-unofficial-blissrom-v17-5-for-hanoip",
+      "release": {
+        "version": "BlissROM v17.5",
+        "date": "2024-05-16"
+      }
     },
     {
       "name": "Bliss OS 17",
@@ -336,7 +586,15 @@
       "status": "shared",
       "posted": "2024",
       "thread": 4649616,
-      "slug": "bliss-os-17-android-14"
+      "slug": "bliss-os-17-android-14",
+      "release": {
+        "version": "Bliss 17.0 (A-Team v0.01)",
+        "date": "2024-01-05",
+        "download": [
+          "https://sourceforge.net/projects/a-team-rom-downloads/files/Hanoip/"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "Project Matrixx",
@@ -345,7 +603,16 @@
       "status": "shared",
       "posted": "2024",
       "thread": 4659713,
-      "slug": "project-matrixx-android-14-for-moto-g60-g40-fusion"
+      "slug": "project-matrixx-android-14-for-moto-g60-g40-fusion",
+      "release": {
+        "version": "Matrixx v10.2.1",
+        "date": "2024-02-03",
+        "download": [
+          "https://sourceforge.net/projects/sozosha-2-0/files/Hanoip/",
+          "https://sourceforge.net/projects/kevin-roms/files/Hanoip/"
+        ],
+        "gapps": "both"
+      }
     },
     {
       "name": "Matrixx OS",
@@ -354,7 +621,15 @@
       "status": "shared",
       "posted": "2024",
       "thread": 4649614,
-      "slug": "matrixx-os-android-14"
+      "slug": "matrixx-os-android-14",
+      "release": {
+        "version": "Matrixx 10.1.2 (A-Team v0.02)",
+        "date": "2024-01-04",
+        "download": [
+          "https://sourceforge.net/projects/a-team-rom-downloads/files/Hanoip/"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "Matrixx OS (hanoip)",
@@ -363,7 +638,15 @@
       "status": "shared",
       "posted": "2023",
       "thread": 4639849,
-      "slug": "matrixx-os-android-14-hanoip"
+      "slug": "matrixx-os-android-14-hanoip",
+      "release": {
+        "version": "Matrixx 10.1.2 (A-Team v0.02)",
+        "date": "2024-01-04",
+        "download": [
+          "https://sourceforge.net/projects/a-team-rom-downloads/files/Hanoip/"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "SkylineUI",
@@ -372,7 +655,14 @@
       "status": "unofficial",
       "posted": "2024",
       "thread": 4649318,
-      "slug": "skylineui-rom-for-motorola-g60-g40-fusion-unofficial"
+      "slug": "skylineui-rom-for-motorola-g60-g40-fusion-unofficial",
+      "release": {
+        "version": "SkylineUI 14",
+        "date": "2024-01-05",
+        "download": [
+          "https://sourceforge.net/projects/sozosha-2-0/files/Skyline/"
+        ]
+      }
     },
     {
       "name": "LMO Droid (Feb 2024)",
@@ -381,7 +671,14 @@
       "status": "shared",
       "posted": "2024-02",
       "thread": 4663513,
-      "slug": "lmo-droid-hanoip-feb-2024"
+      "slug": "lmo-droid-hanoip-feb-2024",
+      "release": {
+        "version": "LMO-Droid (Feb 2024 patch)",
+        "date": "2024-02",
+        "download": [
+          "https://www.pling.com/p/2137972"
+        ]
+      }
     },
     {
       "name": "Superior Extended (19 Mar 2024)",
@@ -390,7 +687,15 @@
       "status": "shared",
       "posted": "2024-03",
       "thread": 4663511,
-      "slug": "superior-extended-hanoip-2024-mar-19"
+      "slug": "superior-extended-hanoip-2024-mar-19",
+      "release": {
+        "version": "Superior Extended (Feb 2024 patch)",
+        "date": "2024-03-19",
+        "download": [
+          "https://sourceforge.net/projects/kevin-roms/files/Hanoip/"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "Superior OS (Feb 2024)",
@@ -399,7 +704,13 @@
       "status": "closed",
       "posted": "2024-02",
       "thread": 4655938,
-      "slug": "closed-superior-os-feb-2024-hanoip"
+      "slug": "closed-superior-os-feb-2024-hanoip",
+      "release": {
+        "version": "SuperiorOS (Feb 2024 patch)",
+        "date": "2024-02-09",
+        "gapps": "both",
+        "note": "download link removed"
+      }
     },
     {
       "name": "Genesis OS (20-02-24)",
@@ -408,7 +719,15 @@
       "status": "shared",
       "posted": "2024-02",
       "thread": 4658343,
-      "slug": "genesis-os-20-02-24-hanoip"
+      "slug": "genesis-os-20-02-24-hanoip",
+      "release": {
+        "version": "GenesisOS Utopia v1.0",
+        "date": "2024-02-20",
+        "download": [
+          "https://sourceforge.net/projects/kevin-roms/files/Hanoip/"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "Uvite by Paranoid (Feb 2024)",
@@ -417,7 +736,12 @@
       "status": "closed",
       "posted": "2024-02",
       "thread": 4656699,
-      "slug": "closed-uvite-by-paranoid-14-feb-2024-hanoip"
+      "slug": "closed-uvite-by-paranoid-14-feb-2024-hanoip",
+      "release": {
+        "version": "AOSPA Uvite",
+        "date": "2024-02-14",
+        "note": "download link removed by moderators"
+      }
     },
     {
       "name": "PixysOS",
@@ -426,25 +750,45 @@
       "status": "shared",
       "posted": "2024",
       "thread": 4652003,
-      "slug": "pixysos-android-14-g60"
+      "slug": "pixysos-android-14-g60",
+      "release": {
+        "version": "PixysOS v7.1.1",
+        "date": "2024-01-20",
+        "download": [
+          "https://sourceforge.net/projects/sozosha-2-0/files/PixyOS/"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "MyUI 6",
       "android": "14",
-      "type": "native",
+      "type": "port",
       "status": "shared",
       "posted": "2023",
       "thread": 4641660,
-      "slug": "myui-6-android-14-rom-for-motorola-g40f-g60"
+      "slug": "myui-6-android-14-rom-for-motorola-g40f-g60",
+      "release": {
+        "version": "MYUI 6 V2 Beta 3",
+        "date": "2023-11-16",
+        "note": "download link removed by moderators"
+      }
     },
     {
       "name": "Project Arcana",
-      "android": "14",
-      "type": "native",
+      "android": "12",
+      "type": "port",
       "status": "shared",
       "posted": "2023",
       "thread": 4638944,
-      "slug": "project-arcana"
+      "slug": "project-arcana",
+      "release": {
+        "version": "Project Arcana port",
+        "date": "2022-11",
+        "download": [
+          "https://mega.nz/file/jEpGgQiB#l1kxg0wXgR6gBhYNEMxH8GXJaz47wlte9GJP_2jF8Ys"
+        ]
+      }
     },
     {
       "name": "LineageOS 20.0",
@@ -453,7 +797,14 @@
       "status": "unofficial",
       "posted": "2022-05",
       "thread": 4450789,
-      "slug": "rom-13-0-hanoip-lineageos-20-0-aosp-g60-g40f"
+      "slug": "rom-13-0-hanoip-lineageos-20-0-aosp-g60-g40f",
+      "release": {
+        "version": "LineageOS 20.0",
+        "date": "2022-05-27",
+        "download": [
+          "https://motorola-sm6150.github.io/"
+        ]
+      }
     },
     {
       "name": "AOSP Tiramisu",
@@ -462,7 +813,15 @@
       "status": "closed",
       "posted": "2022",
       "thread": 4480517,
-      "slug": "closed-rom-13-0-hanoip-android-open-source-project-tiramisu-g60-g40"
+      "slug": "closed-rom-13-0-hanoip-android-open-source-project-tiramisu-g60-g40",
+      "release": {
+        "version": "AOSP 13.0",
+        "date": "2022-08-16",
+        "download": [
+          "https://motorola-sm6150.github.io/"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "ArrowOS",
@@ -471,43 +830,77 @@
       "status": "unofficial",
       "posted": "2024",
       "thread": 4649717,
-      "slug": "shared-arrowos-android13-motog60-g40-fusion-unofficial"
+      "slug": "shared-arrowos-android13-motog60-g40-fusion-unofficial",
+      "release": {
+        "version": "ArrowOS v13.1",
+        "date": "2024-01-02",
+        "download": [
+          "https://onedrive-vercel-index-kohl-eight-30.vercel.app/api/raw/?path=/Public/Arrow-v13.1-hanoip-UNOFFICIAL-20240102-GAPPS.zip"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "Evolution X 7.4",
       "android": "13",
-      "type": "native",
+      "type": "port",
       "status": "shared",
       "posted": "2023",
       "thread": 4609027,
-      "slug": "evolution-x-7-4-for-the-motorola-g40f-g60-hanoip-2022"
+      "slug": "evolution-x-7-4-for-the-motorola-g40f-g60-hanoip-2022",
+      "release": {
+        "version": "Evolution X 7.4 (Dec 2022 patch)",
+        "date": "2022-12-29",
+        "download": [
+          "https://mega.nz/file/dW4kxJbA#qFiVSXTk_Kq2_n7iyd95kb_XIm6GAyJ3I19sIbNx-vk"
+        ]
+      }
     },
     {
       "name": "riceDroid 4.0",
       "android": "13",
-      "type": "native",
+      "type": "port",
       "status": "shared",
       "posted": "2023",
       "thread": 4609287,
-      "slug": "ricedroid-4-0-android-13-hanoip"
+      "slug": "ricedroid-4-0-android-13-hanoip",
+      "release": {
+        "version": "riceDroid 4.0 (v10.2)",
+        "date": "2023-02-11",
+        "download": [
+          "https://sourceforge.net/projects/motorola-sm6150/files/G60/riceDroid/"
+        ]
+      }
     },
     {
       "name": "AncientOS",
       "android": "13",
-      "type": "native",
+      "type": "port",
       "status": "shared",
       "posted": "2023",
       "thread": 4609705,
-      "slug": "ancientos-for-the-motorola-g40f-g60-hanoip"
+      "slug": "ancientos-for-the-motorola-g40f-g60-hanoip",
+      "release": {
+        "version": "AncientOS 7.0",
+        "date": "2023-04",
+        "download": [
+          "https://onedrive.live.com/?authkey=%21AIRSfugvhKilykA&id=35D60FE93D52026%21113&cid=035D60FE93D52026&parId=root&parQt=sharedby&o=OneUp"
+        ]
+      }
     },
     {
       "name": "Void UI",
       "android": "13",
-      "type": "native",
+      "type": "port",
       "status": "closed",
       "posted": "2023",
       "thread": 4612155,
-      "slug": "closed-shared-void-ui-for-the-motorola-g40f-g60-hanoip"
+      "slug": "closed-shared-void-ui-for-the-motorola-g40f-g60-hanoip",
+      "release": {
+        "version": "Void UI port 1.0",
+        "date": "2023",
+        "note": "thread closed"
+      }
     },
     {
       "name": "MyUI 5 (port)",
@@ -516,7 +909,14 @@
       "status": "shared",
       "posted": "2023",
       "thread": 4570819,
-      "slug": "port-13-0-myui-5-port-moto-g60-40f"
+      "slug": "port-13-0-myui-5-port-moto-g60-40f",
+      "release": {
+        "version": "MYUI port V1",
+        "date": "2023-06-19",
+        "download": [
+          "https://mega.nz/file/sXxRBIBa#B7g4qYi-HQJJoAeiXxa54Q9Gv1IQq0iFgbo8jLu0y6c"
+        ]
+      }
     },
     {
       "name": "Cherish OS 4.2 (port)",
@@ -525,7 +925,14 @@
       "status": "shared",
       "posted": "2022",
       "thread": 4519885,
-      "slug": "cherish-os-4-2-port-13-0-moto-g60-40f"
+      "slug": "cherish-os-4-2-port-13-0-moto-g60-40f",
+      "release": {
+        "version": "Cherish OS 4.2 (port 1.0)",
+        "date": "2022-11-17",
+        "download": [
+          "https://drive.google.com/uc?id=1GgIPV4tppMhqvG-pITdJzCwf5eJ5iEbK&export=download"
+        ]
+      }
     },
     {
       "name": "Project Elixir (port)",
@@ -534,7 +941,10 @@
       "status": "closed",
       "posted": "2023",
       "thread": 4573197,
-      "slug": "closed-project-elixir-moto-g60-g40f-port-13-hanoip"
+      "slug": "closed-project-elixir-moto-g60-g40f-port-13-hanoip",
+      "release": {
+        "note": "thread closed and content removed"
+      }
     },
     {
       "name": "crDroid 8.4 (port)",
@@ -543,7 +953,15 @@
       "status": "shared",
       "posted": "2022",
       "thread": 4520357,
-      "slug": "cr-droid-8-4-port-12-0-moto-g60-40f"
+      "slug": "cr-droid-8-4-port-12-0-moto-g60-40f",
+      "release": {
+        "version": "crDroid 8.4 (port 1.0)",
+        "date": "2022-11-18",
+        "download": [
+          "https://drive.google.com/uc?id=1s_xVCEIvIbmzU3ezB92FZKyPJNUB-HEn&export=download"
+        ],
+        "gapps": "included"
+      }
     },
     {
       "name": "Moto Stock12 Modded",
@@ -552,7 +970,11 @@
       "status": "closed",
       "posted": "2023",
       "thread": 4558629,
-      "slug": "closed-moto-stock12-modded-hanoip"
+      "slug": "closed-moto-stock12-modded-hanoip",
+      "release": {
+        "date": "2023-02-26",
+        "note": "Telegram-only download"
+      }
     },
     {
       "name": "Project Oxygen (OxygenOS 11)",
@@ -561,7 +983,11 @@
       "status": "closed",
       "posted": "2023",
       "thread": 4558625,
-      "slug": "closed-project-oxygen-oxygenos-11-on-crack-for-hanoip"
+      "slug": "closed-project-oxygen-oxygenos-11-on-crack-for-hanoip",
+      "release": {
+        "date": "2023-02-26",
+        "note": "Telegram-only download"
+      }
     }
   ],
   "recoveries": [
@@ -666,5 +1092,6 @@
       "thread": 4271155,
       "slug": "moto-g60-hanoip-firmware"
     }
-  ]
+  ],
+  "releases_checked": "2026-11-15"
 }
