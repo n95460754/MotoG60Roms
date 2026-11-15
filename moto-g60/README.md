@@ -40,3 +40,8 @@ fastboot reboot
 
 ## Билд
 `.github/workflows/build-g60-gsi-zip.yml` тегли 7z от SourceForge, вади `.img`, пакетира и качва в Releases.
+
+## PixelOS 16 (специално за hanoip, не GSI)
+Отделен релийз `g60-pixelos16.2-20261102`: огледало на [PixelOS 16.2 от luizpaulo2005](https://github.com/luizpaulo2005/pixelos-hanoip)
+(`.zip` за `adb sideload` + `boot`/`vendor_boot`/`dtbo`/`vbmeta`). Изисква stock Android 12 firmware.
+Обаждания/SMS/мобилни данни още не са тествани от автора. Workflow: `.github/workflows/mirror-pixelos-g60.yml`.

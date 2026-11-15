@@ -1,0 +1,64 @@
+name: Mirror PixelOS 16 for Moto G60
+
+on:
+  push:
+    paths:
+      - ".github/workflows/mirror-pixelos-g60.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  TAG: "g60-pixelos16.2-20261102"
+  ZIP: "PixelOS_hanoip-16.2-20261102-0504-UNOFFICIAL-signed.zip"
+  ZIP_SHA256: "7e14800331874a9433a52970a158395e741c042c420f5aab625996d7d2a1c086"
+  SF_URL: "https://sourceforge.net/projects/pixelos-hanoip/files/16/PixelOS_hanoip-16.2-20261102-0504-UNOFFICIAL-signed.zip/download"
+  IMG_BASE: "https://github.com/luizpaulo2005/pixelos-hanoip/releases/download/16.2-20261102"
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download ROM zip and fastboot images
+        run: |
+          mkdir out && cd out
+          curl -fL --retry 5 --retry-delay 10 -o "$ZIP" "$SF_URL"
+          echo "$ZIP_SHA256  $ZIP" | sha256sum -c -
+          for f in boot.img vendor_boot.img dtbo.img vbmeta.img sha256sums.txt; do
+            curl -fL --retry 5 -o "$f" "$IMG_BASE/$f"
+          done
+          # verify the images against the author's checksums
+          grep -E ' (boot|vendor_boot|dtbo|vbmeta)\.img$' sha256sums.txt | sha256sum -c -
+          ls -la
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cat > notes.md <<'NOTES'
+          **PixelOS 16.2 (Android 16 QPR2) for Moto G60 / G40 Fusion (hanoip)** — mirror of the unofficial build by luizpaulo2005.
+          Original: https://github.com/luizpaulo2005/pixelos-hanoip/releases/tag/16.2-20261102 · XDA: https://xdaforums.com/t/rom-16-unofficial-pixelos-16-for-motorola-moto-g60-hanoip.4807454/
+
+          Checksums verified against the author's published SHA-256 values.
+
+          **Requires:** unlocked bootloader + stock **Android 12** firmware.
+          **Not tested by the author:** calls, SMS, mobile data, VoLTE.
+
+          ### Install (clean)
+          ```
+          fastboot flash boot boot.img
+          fastboot flash vendor_boot vendor_boot.img
+          fastboot flash dtbo dtbo.img
+          fastboot flash vbmeta vbmeta.img
+          # Volume keys -> Recovery Mode
+          # Factory reset -> Format data / factory reset
+          # Apply update -> Apply from ADB, then:
+          adb sideload PixelOS_hanoip-16.2-20261102-0504-UNOFFICIAL-signed.zip
+          # Reboot system now (first boot 5-10 min)
+          ```
+          NOTES
+          gh release delete "$TAG" -R "$GITHUB_REPOSITORY" -y --cleanup-tag || true
+          gh release create "$TAG" -R "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
+            --title "PixelOS 16.2 for Moto G60 (2026-11-02)" --notes-file notes.md \
+            out/*.img out/sha256sums.txt "out/$ZIP"
