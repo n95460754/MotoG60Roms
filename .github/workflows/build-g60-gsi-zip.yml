@@ -1,0 +1,96 @@
+name: Build Moto G60 LineageOS GSI zip
+
+on:
+  push:
+    paths:
+      - "moto-g60/**"
+      - ".github/workflows/build-g60-gsi-zip.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  GSI_DATE: "20260524"
+  GSI_VER: "23.2"
+  TAG: "g60-lineage23.2-20260524"
+  SF_BASE: "https://sourceforge.net/projects/misterztr-gsi/files/LineageOS/Android%2016"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: [VANILLA, GAPPS]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
+          df -h /
+
+      - name: Download GSI
+        run: |
+          NAME="LineageOS-${GSI_VER}-${GSI_DATE}-${{ matrix.variant }}-EXT4-GSI"
+          echo "NAME=$NAME" >> "$GITHUB_ENV"
+          curl -fL --retry 5 --retry-delay 10 -o gsi.7z "${SF_BASE}/${NAME}.7z/download"
+          ls -la gsi.7z
+          7z t gsi.7z
+
+      - name: Extract and package
+        run: |
+          mkdir -p pkg
+          7z e gsi.7z -opkg '*.img'
+          rm gsi.7z
+          mv pkg/*.img pkg/system.img
+          python3 moto-g60/tools/make_blank_vbmeta.py pkg/vbmeta_disabled.img
+          cp moto-g60/flash-all.sh moto-g60/flash-all.bat moto-g60/README.md pkg/
+          (cd pkg && sha256sum system.img vbmeta_disabled.img > SHA256SUMS)
+          OUT="LineageOS-${GSI_VER}-${GSI_DATE}-${{ matrix.variant }}-EXT4-hanoip.zip"
+          (cd pkg && zip -6 -r "../$OUT" .)
+          rm -rf pkg
+          SIZE=$(stat -c %s "$OUT")
+          echo "zip size: $SIZE"
+          # GitHub release assets must be < 2 GiB: split if needed
+          if [ "$SIZE" -ge 2000000000 ]; then
+            mkdir split && mv "$OUT" split/
+            (cd split && zip -s 1900m "$OUT" --out "../$OUT" ) && rm -rf split
+          fi
+          sha256sum LineageOS-*.z* > "${OUT%.zip}.sha256"
+          ls -la
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.variant }}
+          path: |
+            LineageOS-*.z*
+            LineageOS-*.sha256
+          retention-days: 3
+          compression-level: 0
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: out
+          merge-multiple: true
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ls -la out
+          cat > notes.md <<'NOTES'
+          LineageOS 23.2 (Android 16 QPR2) GSI packaged for **Moto G60 / G40 Fusion (hanoip)**.
+          Source: https://github.com/MisterZtr/LineageOS_gsi/releases/tag/v2026.05.24-lineage23.2 (unofficial build by MisterZtr).
+
+          - EXT4 builds only (EROFS needs kernel 5.4+, hanoip runs 4.14)
+          - Unzip, boot phone to bootloader, run `flash-all.bat` (Windows) or `./flash-all.sh` (Linux/macOS)
+          - Wipes all data. Bootloader must be unlocked.
+          NOTES
+          gh release delete "$TAG" -R "$GITHUB_REPOSITORY" -y --cleanup-tag || true
+          gh release create "$TAG" -R "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
+            --title "LineageOS 23.2 GSI for Moto G60 (2026-05-24)" --notes-file notes.md out/*
