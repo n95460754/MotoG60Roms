@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate README.md for the Moto G40/G60 ROM catalog from roms.json."""
+"""Generate README.md for the Moto G60 ROM catalog from roms.json."""
 import json
 from pathlib import Path
 
@@ -34,8 +34,9 @@ def main():
         "> GitHub's 100 MB file limit, and are distributed by their developers. Always download",
         "> from the original XDA thread and read the install instructions there.",
         "",
-        "> ⚠️ Moto **G60s** (XT2133) is a *different* device — these ROMs are only for **hanoip**",
-        "> (G40 Fusion XT2147 / G60 XT2135).",
+        "> ⚠️ Only for the **Moto G60 (XT2135, `hanoip`)**. Moto **G60s** (XT2133) is a *different*",
+        "> device — do not flash these on it. (XDA threads also say \"G40F\": the G40 Fusion",
+        "> shares the same hardware and codename, so those builds are G60 builds too.)",
         "",
         "Legend: 🟢 Official · 🟡 Unofficial · 🔵 Shared (re-posted by a user) · ⚫ Closed thread",
         "",

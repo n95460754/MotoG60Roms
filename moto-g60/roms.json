@@ -1,0 +1,670 @@
+{
+  "device": "Motorola Moto G60 (XT2135)",
+  "codename": "hanoip",
+  "soc": "Qualcomm SM7150 Snapdragon 732G",
+  "source": "https://xdaforums.com/f/moto-g40-g60.12237/",
+  "collected": "2026-11-15",
+  "roms": [
+    {
+      "name": "PixelOS 16",
+      "android": "16",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2026-11",
+      "thread": 4807454,
+      "slug": "rom-16-unofficial-pixelos-16-for-motorola-moto-g60-hanoip"
+    },
+    {
+      "name": "Project Infinity X 3.11",
+      "android": "16",
+      "type": "native",
+      "status": "shared",
+      "posted": "2026",
+      "thread": 4791228,
+      "slug": "project-infinity-x-3-11-for-moto-g40-g60"
+    },
+    {
+      "name": "Infinity X 3.9 (QPR2)",
+      "android": "16",
+      "type": "native",
+      "status": "shared",
+      "posted": "2026",
+      "thread": 4786735,
+      "slug": "infinity-x-3-9-qpr2-for-moto-g40-g60"
+    },
+    {
+      "name": "Lunaris AOSP (March 2026)",
+      "android": "16",
+      "type": "native",
+      "status": "shared",
+      "posted": "2026-03",
+      "thread": 4783256,
+      "slug": "lunaris-aosp-android-16-march-2026-for-moto-g40-g60"
+    },
+    {
+      "name": "Evolution X (GSI)",
+      "android": "16",
+      "type": "gsi",
+      "status": "shared",
+      "posted": "2025",
+      "thread": 4768707,
+      "slug": "evolution-x-android-16-gsi-for-moto-g40-g60"
+    },
+    {
+      "name": "RisingOS (GSI)",
+      "android": "16",
+      "type": "gsi",
+      "status": "shared",
+      "posted": "2025",
+      "thread": 4764607,
+      "slug": "rising-os-android-16-gsi-for-moto-g40-g60"
+    },
+    {
+      "name": "DerpFest 16.0 (GSI)",
+      "android": "16",
+      "type": "gsi",
+      "status": "shared",
+      "posted": "2025",
+      "thread": 4773320,
+      "slug": "derpfest-16-0-gsi-for-moto-g40-g60"
+    },
+    {
+      "name": "2by2 Lineage",
+      "android": "15",
+      "type": "native",
+      "status": "official",
+      "posted": "2024",
+      "thread": 4704253,
+      "slug": "rom-15-official-2by2-lineage-stable-g40f-g60"
+    },
+    {
+      "name": "Pixel Build (27.9.2025)",
+      "android": "?",
+      "type": "native",
+      "status": "shared",
+      "posted": "2025-09",
+      "thread": 4761982,
+      "slug": "pixel-build-for-the-motorola-g40f-g60-hanoip-27-9-2025"
+    },
+    {
+      "name": "PixelExperience",
+      "android": "14",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2022-05",
+      "thread": 4449285,
+      "slug": "rom-14-0-hanoip-pixelexperience-aosp-g60-g40f"
+    },
+    {
+      "name": "crDroid (stable)",
+      "android": "14",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2024-05",
+      "thread": 4670954,
+      "slug": "rom-14-unofficial-hanoip-stable-crdroid-android-for-moto-g60-g40"
+    },
+    {
+      "name": "crDroid 10.6",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024",
+      "thread": 4690543,
+      "slug": "crdroid-10-6-hanoip-2024"
+    },
+    {
+      "name": "crDroid 10.2 (17-2-24)",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024-02",
+      "thread": 4658344,
+      "slug": "crdroid-10-2-17-2-24-hanoip"
+    },
+    {
+      "name": "crDroid 10",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024",
+      "thread": 4650983,
+      "slug": "shared-crdroid-10-android-14-hanoip"
+    },
+    {
+      "name": "LineageOS 21",
+      "android": "14",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2024",
+      "thread": 4668721,
+      "slug": "rom-14-0-aosp-g60-40-lineageos-21"
+    },
+    {
+      "name": "LineageOS (Android 14)",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024",
+      "thread": 4653649,
+      "slug": "lineage-os-android-14-hanoip"
+    },
+    {
+      "name": "Lineage OS 2.1.0 (16-2-2024)",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024-02",
+      "thread": 4658346,
+      "slug": "lineage-os-2-1-0-16-2-2024-hanoip"
+    },
+    {
+      "name": "Project Sakura",
+      "android": "14",
+      "type": "native",
+      "status": "official",
+      "posted": "2024-09",
+      "thread": 4693290,
+      "slug": "shared-rom-official-project-sakura-g60-g40f-14-hanoip-gapps"
+    },
+    {
+      "name": "PixelBuilds",
+      "android": "14",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2025-12",
+      "thread": 4773713,
+      "slug": "rom-unofficial-pixelbuilds-android14-hanoip"
+    },
+    {
+      "name": "PixelBuilds (older thread)",
+      "android": "14",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2024",
+      "thread": 4683699,
+      "slug": "rom-unofficial-pixelbuilds-android14-hanoip"
+    },
+    {
+      "name": "PixelOS",
+      "android": "14",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2024",
+      "thread": 4657000,
+      "slug": "rom-14-unofficial-pixelos-aosp-stable-g40f-g60"
+    },
+    {
+      "name": "PixelOS (shared)",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024",
+      "thread": 4649364,
+      "slug": "shared-pixelos-unofficial-motog60-g40-fusion"
+    },
+    {
+      "name": "PixelOS (Feb 2024)",
+      "android": "14",
+      "type": "native",
+      "status": "closed",
+      "posted": "2024-02",
+      "thread": 4655940,
+      "slug": "closed-pixel-os-feb-2024-hanoip"
+    },
+    {
+      "name": "PixelStar 2.0",
+      "android": "14",
+      "type": "native",
+      "status": "official",
+      "posted": "2024-05",
+      "thread": 4671018,
+      "slug": "official-rom-14-may-patch-pixelstar-2-0-aosp-stable-g40f-g60"
+    },
+    {
+      "name": "PixelStar 2.0",
+      "android": "14",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2024",
+      "thread": 4670782,
+      "slug": "rom-14-unofficial-pixelstar-2-0-aosp-stable-g40f-g60"
+    },
+    {
+      "name": "Evolution X 9.4 (9 Sep 2024)",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024-09",
+      "thread": 4690538,
+      "slug": "9-sep-2024-evolution-x-9-4-hanoip-ai"
+    },
+    {
+      "name": "Evolution X (16 Mar 2024)",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024-03",
+      "thread": 4663512,
+      "slug": "evolution-x-hanoip-16-mar-2024"
+    },
+    {
+      "name": "Evolution X (stable)",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024",
+      "thread": 4653577,
+      "slug": "evolution-x-stable-hanoip"
+    },
+    {
+      "name": "Evolution X v8.0.2",
+      "android": "14",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2024-01",
+      "thread": 4649538,
+      "slug": "shared-rom-evolution-x-unofficial-v8-0-2motog60-g40fusion"
+    },
+    {
+      "name": "AwakenOS",
+      "android": "14",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2024",
+      "thread": 4668183,
+      "slug": "rom-14-unofficial-awakenos-aosp-stable-g40f-g60"
+    },
+    {
+      "name": "RisingOS 2.0",
+      "android": "14",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2024",
+      "thread": 4667946,
+      "slug": "rom-14-0-risingos-2-0-a14-o-unofficial-aosp-g60-g40f"
+    },
+    {
+      "name": "DerpFest 14 (UDC)",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024",
+      "thread": 4670171,
+      "slug": "derpfest-14-g60-40-fusion-aosp-udc"
+    },
+    {
+      "name": "DerpFest",
+      "android": "14",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2024",
+      "thread": 4667944,
+      "slug": "rom-14-0-derpfest-a14-o-unofficial-aosp-g60-g40f"
+    },
+    {
+      "name": "DerpFest stable (16-2-24)",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024-02",
+      "thread": 4658347,
+      "slug": "derpfest-stable-16-2-24-hanoip"
+    },
+    {
+      "name": "DerpFest beta",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024",
+      "thread": 4652005,
+      "slug": "derpfest-beta-android-14-hanoip"
+    },
+    {
+      "name": "BlissROM v17.5",
+      "android": "14",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2024",
+      "thread": 4672061,
+      "slug": "rom-unofficial-blissrom-v17-5-for-hanoip"
+    },
+    {
+      "name": "Bliss OS 17",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024",
+      "thread": 4649616,
+      "slug": "bliss-os-17-android-14"
+    },
+    {
+      "name": "Project Matrixx",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024",
+      "thread": 4659713,
+      "slug": "project-matrixx-android-14-for-moto-g60-g40-fusion"
+    },
+    {
+      "name": "Matrixx OS",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024",
+      "thread": 4649614,
+      "slug": "matrixx-os-android-14"
+    },
+    {
+      "name": "Matrixx OS (hanoip)",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2023",
+      "thread": 4639849,
+      "slug": "matrixx-os-android-14-hanoip"
+    },
+    {
+      "name": "SkylineUI",
+      "android": "14",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2024",
+      "thread": 4649318,
+      "slug": "skylineui-rom-for-motorola-g60-g40-fusion-unofficial"
+    },
+    {
+      "name": "LMO Droid (Feb 2024)",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024-02",
+      "thread": 4663513,
+      "slug": "lmo-droid-hanoip-feb-2024"
+    },
+    {
+      "name": "Superior Extended (19 Mar 2024)",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024-03",
+      "thread": 4663511,
+      "slug": "superior-extended-hanoip-2024-mar-19"
+    },
+    {
+      "name": "Superior OS (Feb 2024)",
+      "android": "14",
+      "type": "native",
+      "status": "closed",
+      "posted": "2024-02",
+      "thread": 4655938,
+      "slug": "closed-superior-os-feb-2024-hanoip"
+    },
+    {
+      "name": "Genesis OS (20-02-24)",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024-02",
+      "thread": 4658343,
+      "slug": "genesis-os-20-02-24-hanoip"
+    },
+    {
+      "name": "Uvite by Paranoid (Feb 2024)",
+      "android": "14",
+      "type": "native",
+      "status": "closed",
+      "posted": "2024-02",
+      "thread": 4656699,
+      "slug": "closed-uvite-by-paranoid-14-feb-2024-hanoip"
+    },
+    {
+      "name": "PixysOS",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2024",
+      "thread": 4652003,
+      "slug": "pixysos-android-14-g60"
+    },
+    {
+      "name": "MyUI 6",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2023",
+      "thread": 4641660,
+      "slug": "myui-6-android-14-rom-for-motorola-g40f-g60"
+    },
+    {
+      "name": "Project Arcana",
+      "android": "14",
+      "type": "native",
+      "status": "shared",
+      "posted": "2023",
+      "thread": 4638944,
+      "slug": "project-arcana"
+    },
+    {
+      "name": "LineageOS 20.0",
+      "android": "13",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2022-05",
+      "thread": 4450789,
+      "slug": "rom-13-0-hanoip-lineageos-20-0-aosp-g60-g40f"
+    },
+    {
+      "name": "AOSP Tiramisu",
+      "android": "13",
+      "type": "native",
+      "status": "closed",
+      "posted": "2022",
+      "thread": 4480517,
+      "slug": "closed-rom-13-0-hanoip-android-open-source-project-tiramisu-g60-g40"
+    },
+    {
+      "name": "ArrowOS",
+      "android": "13",
+      "type": "native",
+      "status": "unofficial",
+      "posted": "2024",
+      "thread": 4649717,
+      "slug": "shared-arrowos-android13-motog60-g40-fusion-unofficial"
+    },
+    {
+      "name": "Evolution X 7.4",
+      "android": "13",
+      "type": "native",
+      "status": "shared",
+      "posted": "2023",
+      "thread": 4609027,
+      "slug": "evolution-x-7-4-for-the-motorola-g40f-g60-hanoip-2022"
+    },
+    {
+      "name": "riceDroid 4.0",
+      "android": "13",
+      "type": "native",
+      "status": "shared",
+      "posted": "2023",
+      "thread": 4609287,
+      "slug": "ricedroid-4-0-android-13-hanoip"
+    },
+    {
+      "name": "AncientOS",
+      "android": "13",
+      "type": "native",
+      "status": "shared",
+      "posted": "2023",
+      "thread": 4609705,
+      "slug": "ancientos-for-the-motorola-g40f-g60-hanoip"
+    },
+    {
+      "name": "Void UI",
+      "android": "13",
+      "type": "native",
+      "status": "closed",
+      "posted": "2023",
+      "thread": 4612155,
+      "slug": "closed-shared-void-ui-for-the-motorola-g40f-g60-hanoip"
+    },
+    {
+      "name": "MyUI 5 (port)",
+      "android": "13",
+      "type": "port",
+      "status": "shared",
+      "posted": "2023",
+      "thread": 4570819,
+      "slug": "port-13-0-myui-5-port-moto-g60-40f"
+    },
+    {
+      "name": "Cherish OS 4.2 (port)",
+      "android": "13",
+      "type": "port",
+      "status": "shared",
+      "posted": "2022",
+      "thread": 4519885,
+      "slug": "cherish-os-4-2-port-13-0-moto-g60-40f"
+    },
+    {
+      "name": "Project Elixir (port)",
+      "android": "13",
+      "type": "port",
+      "status": "closed",
+      "posted": "2023",
+      "thread": 4573197,
+      "slug": "closed-project-elixir-moto-g60-g40f-port-13-hanoip"
+    },
+    {
+      "name": "crDroid 8.4 (port)",
+      "android": "12",
+      "type": "port",
+      "status": "shared",
+      "posted": "2022",
+      "thread": 4520357,
+      "slug": "cr-droid-8-4-port-12-0-moto-g60-40f"
+    },
+    {
+      "name": "Moto Stock12 Modded",
+      "android": "12",
+      "type": "stock-mod",
+      "status": "closed",
+      "posted": "2023",
+      "thread": 4558629,
+      "slug": "closed-moto-stock12-modded-hanoip"
+    },
+    {
+      "name": "Project Oxygen (OxygenOS 11)",
+      "android": "11",
+      "type": "port",
+      "status": "closed",
+      "posted": "2023",
+      "thread": 4558625,
+      "slug": "closed-project-oxygen-oxygenos-11-on-crack-for-hanoip"
+    }
+  ],
+  "recoveries": [
+    {
+      "name": "OrangeFox Recovery (touch fixed) R11.1",
+      "thread": 4458141,
+      "slug": "unofficial-recovery-touch-fixed-orangefox-recovery-project-ofrp-moto-g40-fusion-g60-r11-1"
+    },
+    {
+      "name": "TWRP for Android 14",
+      "thread": 4641693,
+      "slug": "twrp-android-14-for-hanoip"
+    },
+    {
+      "name": "TWRP 3.6.2 official (closed)",
+      "thread": 4453417,
+      "slug": "closed-recovery-12l-official-twrp-3-6-2-12-1-0-team-win-recovery-project-moto-g60-g40"
+    },
+    {
+      "name": "TWRP 3.6.1 alpha (unofficial)",
+      "thread": 4424841,
+      "slug": "recovery-alpha-unofficial-twrp-3-6-1-r_11-hanoip"
+    },
+    {
+      "name": "TWRP 3.6.0 (discontinued)",
+      "thread": 4386747,
+      "slug": "recovery-discontinued-twrp-3-6-0_11-for-moto-g40-60"
+    },
+    {
+      "name": "PitchBlack Recovery (PBRP)",
+      "thread": 4552355,
+      "slug": "unofficial-recovery-12-hanoip-pitch-black-recovery-project"
+    },
+    {
+      "name": "SkyHawk Recovery (SHRP)",
+      "thread": 4552353,
+      "slug": "unofficial-recovery-12-hanoip-sky-hawk-recovery-project"
+    }
+  ],
+  "kernels": [
+    {
+      "name": "Meteora Kernel 120Hz + KernelSU-Next (for 2by2 ROM, A15)",
+      "thread": 4801315,
+      "slug": "kernel-15-0-hanoip-meteora-kernel-120hz-kernelsu-next-manual-hooks-for-2by2-rom"
+    },
+    {
+      "name": "Meteora Kernel 120Hz + ReSukiSU & SuSFS (for 2by2 ROM, A15)",
+      "thread": 4801429,
+      "slug": "kernel-15-0-hanoip-meteora-kernel-120hz-resukisu-inline-hooks-susfs-v1-5-5-for-2by2-rom"
+    },
+    {
+      "name": "Custom Kernel with KernelSU-Next (A14)",
+      "thread": 4800308,
+      "slug": "kernel-14-0-hanoip-custom-kernel-with-kernelsu-next-manual-hooks-for-moto-g40-g60"
+    },
+    {
+      "name": "Kali NetHunter Kernel (experimental)",
+      "thread": 4779205,
+      "slug": "kernel-test-mod-moto-g40-g60-fusion-kali-nethunter-kernel-experimental"
+    }
+  ],
+  "guides": [
+    {
+      "name": "How to install Android 14 ROMs on G60/G40F",
+      "thread": 4668430,
+      "slug": "guide-a14-how-to-install-latest-android-14-roms-on-motorola-g60-g40f-hanoip"
+    },
+    {
+      "name": "Android 16 GSI complete guide",
+      "thread": 4756758,
+      "slug": "android-16-gsi-complete-guide-for-moto-g40-fusion-g60-flash-fix-enjoy"
+    },
+    {
+      "name": "How to flash GSIs through fastboot",
+      "thread": 4353849,
+      "slug": "how-to-flash-gsis-through-fastboot"
+    },
+    {
+      "name": "GSI ROMs list (MIUI, NothingOS, Flyme...)",
+      "thread": 4650706,
+      "slug": "gsi-roms-ex-miui-nothingos-flyme-list-for-moto-g60"
+    },
+    {
+      "name": "All custom ROMs in one place",
+      "thread": 4610063,
+      "slug": "all-custom-rom-on-one-place-hanoip"
+    },
+    {
+      "name": "Customize your hanoip like a pro",
+      "thread": 4779815,
+      "slug": "customize-your-hanoip-like-a-pro"
+    }
+  ],
+  "stock": [
+    {
+      "name": "Moto G60 stock firmware (Android 11, untested)",
+      "thread": 4786491,
+      "slug": "motorola-g60-stock-firmware-android-11-untested"
+    },
+    {
+      "name": "Moto G60 hanoip firmware",
+      "thread": 4271155,
+      "slug": "moto-g60-hanoip-firmware"
+    }
+  ]
+}

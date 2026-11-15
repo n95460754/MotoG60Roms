@@ -1,4 +1,4 @@
-# Custom ROMs — Motorola Moto G40 Fusion / Moto G60 (`hanoip`)
+# Custom ROMs — Motorola Moto G60 (XT2135) (`hanoip`)
 
 SoC: **Qualcomm SM7150 Snapdragon 732G**  
 Source: [XDA Forums — Moto G40 / G60](https://xdaforums.com/f/moto-g40-g60.12237/)  
@@ -8,8 +8,9 @@ Collected: 2026-11-15 · **62 ROMs**, 7 recoveries, 4 kernels
 > GitHub's 100 MB file limit, and are distributed by their developers. Always download
 > from the original XDA thread and read the install instructions there.
 
-> ⚠️ Moto **G60s** (XT2133) is a *different* device — these ROMs are only for **hanoip**
-> (G40 Fusion XT2147 / G60 XT2135).
+> ⚠️ Only for the **Moto G60 (XT2135, `hanoip`)**. Moto **G60s** (XT2133) is a *different*
+> device — do not flash these on it. (XDA threads also say "G40F": the G40 Fusion
+> shares the same hardware and codename, so those builds are G60 builds too.)
 
 Legend: 🟢 Official · 🟡 Unofficial · 🔵 Shared (re-posted by a user) · ⚫ Closed thread
 
@@ -140,7 +141,6 @@ Legend: 🟢 Official · 🟡 Unofficial · 🔵 Shared (re-posted by a user) ·
 
 - [Moto G60 stock firmware (Android 11, untested)](https://xdaforums.com/t/motorola-g60-stock-firmware-android-11-untested.4786491/)
 - [Moto G60 hanoip firmware](https://xdaforums.com/t/moto-g60-hanoip-firmware.4271155/)
-- [Stock ROM](https://xdaforums.com/t/stock-rom.4416223/)
 
 ## Updating
 
